@@ -178,7 +178,11 @@
             if ([subEntityClass shouldUseSubEntityRecordClassToRepresentData:object]) {
                 return [self subEntityForRecordResponseObject:object
                                             withInitialEntity:subEntity];
+            } else {
+                return [self subEntityForRecordResponseObject:object withInitialEntity:subEntity];
             }
+        } else {
+            return [self subEntityForRecordResponseObject:object withInitialEntity:subEntity];
         }
     }
     
